@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <!-- url -->
+  <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=TrainingManagement;encrypt=true;trustServerCertificate=true;</property>
+  <!-- user -->
+  <property name="hibernate.connection.username">user</property>
+  <!-- pass -->
+  <property name="hibernate.connection.password">pass</property>
+  <!-- driver -->
+  <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+  <!-- dialect -->
+  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+  <!-- <property name="hibernate.show_sql">true</property> -->
+  <!--   <property name="format_sql">true</property> -->
+  <property name="hbm2ddl.auto">update</property>
+  
+  <property name="hibernate.cache.use_second_level_cache">true</property>
+  <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+  
+ </session-factory>
+</hibernate-configuration>
